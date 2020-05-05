@@ -49,6 +49,10 @@ function ProductCard(props) {
     
   }
 
+  const onFocus = (event) =>{
+    setQuantity('');
+  }
+
   const onChangeQuantity = (event) => {
     setQuantity(event.target.value)
   }
@@ -67,7 +71,12 @@ function ProductCard(props) {
                 <div className='text-center'>
                   <div className='form-row'>
                     <div className='col'>
-                      <input type='number' className='form-control mb-2' value={quantity} onChange={onChangeQuantity} />
+                      <input 
+                        type='number'
+                        className='form-control mb-2'
+                        value={quantity}
+                        onFocus={onFocus}
+                        onChange={onChangeQuantity} />
                     </div>
                     <div className='col'>
                       <button className='btn btn-success text-white form-control' onClick={addToCart}>Order</button>
