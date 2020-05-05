@@ -25,12 +25,12 @@ function TransactionItem(props){
 
     return  <>   
                 <div className='container'>
-                    <div className='row'>
-                            <div className='col-xs-12 col-sm-12 col-md-10 col-lg-10 mx-auto text-center'>
-                            <h4>Preview</h4>
-                            <table className='table table-responsive'>
+                    {/* <div className='row'> */}
+                            <div className='col-xs-12 col-sm-12 col-md-12 col-lg-12 justify-content-center mx-auto'>
+                            <h4 className='text-center text-white font-weight-bolder'>Preview</h4>
+                            <table className='table table-dark table-responsive text-white'>
                                 <thead>
-                                    <tr>
+                                    <tr className=''>
                                         <td>Image</td>
                                         <td>Name</td>
                                         <td>Price(PHP)</td>
@@ -66,7 +66,7 @@ function TransactionItem(props){
                             </table>
                         </div>
                         
-                    </div>
+                    {/* </div> */}
                 </div> 
             </>
 }

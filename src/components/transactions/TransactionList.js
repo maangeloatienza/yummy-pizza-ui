@@ -11,12 +11,12 @@ function TransactionList(props){
     }
 
     return   <>
-                <div className='col-9 mx-auto'>
+                <div className='col-8 justify-content-center mx-auto'>
                     <h4 className="mb-1 text-center">
                         <span className="text-muted">Order History  </span>
                     </h4>
                     <p className="text-muted text-right">count : {props.count} </p>
-                    <table className='table table-dark table-responsive text-center'>
+                    <table className='table table-dark table-responsive text-center mx-auto'>
                         <thead>
                             <tr>
                                 <td>Code</td>
