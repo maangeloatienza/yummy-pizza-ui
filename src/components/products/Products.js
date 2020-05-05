@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ProductList from './ProductList';
-
+import ProductCarousel from './../carousel/ProductCarousel';
 
 import { getToken,getUser } from '../../utils/Commons';
 import { getProducts, getUserCart} from './../../api/apiCall';
@@ -36,9 +36,11 @@ class Products extends Component {
   render(){
     return (
       <div className="container">
+          <ProductCarousel />
           <div className="row">
-            <ProductList products={this.state.products} />
-          </div>
+        
+          <ProductList products={this.state.products} />
+        </div>
       </div>
     )
   }

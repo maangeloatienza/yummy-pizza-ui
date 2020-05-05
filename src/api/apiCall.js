@@ -72,4 +72,13 @@ export function getTransaction(id,params) {
     })
 }
 
+export function getBanners(params) {
+  return API.get(`banners?${params}`)
+    .then(response => {
+      let data = response.data;
+
+      return data;
+    })
+}
+
 
