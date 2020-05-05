@@ -2,7 +2,7 @@ import axios from 'axios';
 import {getToken} from './Commons';
 
 export default axios.create({
-    baseURL: "https://mighty-retreat-58606.herokuapp.com/api/v1/",
+    baseURL: "52.221.216.10:2408/api/v1/",
     // baseURL: "http://localhost:8000/api/v1/",
     headers : {
       'Authorization' : `${getToken()}`
