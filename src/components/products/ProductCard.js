@@ -28,7 +28,7 @@ function ProductCard(props) {
     
     
     body.product_id = product.id;
-    body.quantity = parseInt(quantity);
+    body.quantity = parseInt(quantity) || 0;
   
    if(body.quantity > 0){
       addCart(`user=${getToken() ? body.user_id = user.id : body.guest_user = guest_user}`,body).then(response=>{
@@ -45,7 +45,7 @@ function ProductCard(props) {
         });
       });
     }
-    CusToast('Oops! No quantity added',false)
+    if (body.quantity <= 0 || body.quantity === null)CusToast('Oops! No quantity added',false)
     
   }
 
