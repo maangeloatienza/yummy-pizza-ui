@@ -1,9 +1,9 @@
 import React from 'react';
-import Toast from './../../utils/Toast';
+import {Toast} from './../../utils/Toast';
 
 import {logout} from './../../api/apiCall';
 import { withRouter } from 'react-router-dom';
-import { removeUserSession, getToken } from './../../utils/Commons';
+import { removeUserSession } from './../../utils/Commons';
 
 
 

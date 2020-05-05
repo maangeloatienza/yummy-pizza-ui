@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import Toast from './../../utils/Toast';
+import {Toast} from './../../utils/Toast';
 
 import { getToken, getUser } from '../../utils/Commons';
 import { getUserCart, updateCart } from './../../api/apiCall';

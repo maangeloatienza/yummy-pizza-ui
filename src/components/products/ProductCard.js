@@ -4,7 +4,7 @@ import { addCart, getUserCart } from './../../api/apiCall';
 import { getToken,getUser } from '../../utils/Commons';
 import { withGlobalState } from 'react-globally'
 
-import Toast from './../../utils/Toast';
+import {Toast, CusToast} from './../../utils/Toast';
 
 
 
@@ -29,22 +29,23 @@ function ProductCard(props) {
     
     body.product_id = product.id;
     body.quantity = parseInt(quantity);
-    console.log('USER',user);
-    console.log('GUEST_USER',guest_user);
-   
-    addCart(`user=${getToken() ? body.user_id = user.id : body.guest_user = guest_user}`,body).then(response=>{
-      let params = getToken() ? `user=${body.user_id}` : `guest=${body.guest_user}`;
-      getUserCart(params).then((cart) => {
-        
-        props.setGlobalState({
-          badge : cart.count
-        })
-        setQuantity(0)
+  
+   if(body.quantity > 0){
+      addCart(`user=${getToken() ? body.user_id = user.id : body.guest_user = guest_user}`,body).then(response=>{
+        let params = getToken() ? `user=${body.user_id}` : `guest=${body.guest_user}`;
+        getUserCart(params).then((cart) => {
+          
+          props.setGlobalState({
+            badge : cart.count
+          })
+          setQuantity(0)
 
-        Toast(response);
+          Toast(response);
 
+        });
       });
-    });
+    }
+    CusToast('Oops! No quantity added',false)
     
   }
 

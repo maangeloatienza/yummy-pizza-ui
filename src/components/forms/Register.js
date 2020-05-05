@@ -3,7 +3,7 @@ import API from '../../utils/API';
 import { withRouter } from 'react-router-dom';
 import { setUserSession } from '../../utils/Commons';
 
-import Toast from './../../utils/Toast';
+import {Toast} from './../../utils/Toast';
 
 class Register extends Component {
 

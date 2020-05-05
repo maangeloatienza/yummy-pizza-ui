@@ -2,7 +2,7 @@ import React,{Component, useRef} from 'react';
 import { withRouter } from 'react-router-dom';
 import { getToken, getUser } from '../../utils/Commons';
 import {checkout} from './../../api/apiCall';
-import Toast from './../../utils/Toast';
+import {Toast} from './../../utils/Toast';
 
 class CheckoutForm extends Component{
     
