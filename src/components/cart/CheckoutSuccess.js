@@ -38,8 +38,8 @@ class CheckoutSuccess extends Component{
                 <div className='row'>
                     <div className='col-sm-12 col-md-8 col-lg-8 mx-auto'>
                         <div className='text-center'>
-                            <h3>Thank you!</h3>
-                            <p className='lead'>Your order will now be processed.</p>
+                            <h3 className='text-white'>Thank you!</h3>
+                            <p className='lead text-white'>Your order will now be processed.</p>
                             
                             
                             <div className='col-12'>
