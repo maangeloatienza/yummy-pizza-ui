@@ -41,7 +41,7 @@ class CheckoutForm extends Component{
         return  (
             <div>
                 <h4 className="d-flex justify-content-between align-items-center mb-3">
-                    <span className="text-muted">Billing information</span>
+                    <span className="text-white">Billing information</span>
                     
                 </h4>
                 <form onSubmit={this.onCheckout}>

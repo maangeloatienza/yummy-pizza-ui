@@ -70,7 +70,7 @@ function Checkout(props){
 
     return  <div>
                 <h4 className="d-flex justify-content-between align-items-center mb-3">
-                    <span className="text-muted">Your cart</span>
+                    <span className="text-white">Your cart</span>
                     <span className="badge badge-secondary badge-pill">{count}</span>
                 </h4>
                     <ul className="list-group mb-3 text-left">
