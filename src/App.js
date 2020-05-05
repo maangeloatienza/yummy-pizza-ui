@@ -32,9 +32,9 @@ function App(props) {
     setLoggedIn(isLoggedIn);
   }
 
-  return  <div >
+  return  <div>
             <Navbar isLoggedIn={isLoggedIn}/>
-            <div className="container">
+            <div className="container mt-5">
 
               <RouteLinks />
               <ToastContainer/>

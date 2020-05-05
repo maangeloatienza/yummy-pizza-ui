@@ -8,14 +8,14 @@ import PizzaLogo from './pngfuel.com.png';
 
 function Navbar (props) {
     const {isLoggedIn} = props;
-    return <nav className="navbar navbar-expand-lg navbar-dark bg-warning static-top mb-5">
+    return <nav className="navbar navbar-expand-lg navbar-dark bg-warning fixed-top mb-5">
 
                 <div className="container">
                     <Link to={'/'} className="navbar-brand" >
                 <img className='img-fluid' style={{ height: '70px', width: '70px',}} src={PizzaLogo} alt=""/>
                     </Link>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navList" aria-controls="navList" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
+                    <button className="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#navList" aria-controls="navList" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon "></span>
                         </button>
 
                     <div className="collapse navbar-collapse" id='navList'>
