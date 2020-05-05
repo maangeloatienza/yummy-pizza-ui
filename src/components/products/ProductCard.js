@@ -55,12 +55,12 @@ function ProductCard(props) {
 
   return <div className='col-xs-12 cold-sm-6 col-md-4 col-lg-3 my-2'>
           <div className='card' key={product.id}>  
-            {/* <div className='card-title font-weight-bolder fredoka-cursive'>{product.name}</div> */}
+            <div className='card-title font-weight-bolder fredoka-cursive m-auto'>{product.name}</div>
             <img className='card-img-top img-fluid' style={{height:'180px'}} src={product.image} alt={product.name}/>
             <div className='card-body'>
-                <div className='justify-content-between text-center mb-2'>
-                  <span className="card-title fredoka-cursive col-6">{product.name}</span>
-                  <span className='card-text font-weight-bolder col-6'>&#8369; {product.price}</span>
+                <div>
+                  {/* <h5 className="card-title fredoka-cursive text-center">{product.name}</h5> */}
+                  <p className='card-text text-right font-weight-bolder'>&#8369; {product.price}</p>
                 </div>
               {
                 product.availability ?
