@@ -18,7 +18,6 @@ function Transactions(props){
     },[]);
 
     const fetchTransactions = () =>{
-        // let params = getToken() ? `user=${getUser().id}` : `user=${localStorage.getItem('guest')}`;
         
         getTransactions(`${params}&sort_id=${sort_id}&sort_desc=${sort_desc}&limit=999`).then(response =>{ 
             setTransactions(response.data);
@@ -30,7 +29,9 @@ function Transactions(props){
 
     return  <div className='container'>
                 <div className='row'>
-                    <TransactionList count={count} transactions={transactions}/>
+                    <TransactionList 
+                        count={count}
+                        transactions={transactions}/>
                 </div>
             </div>
 }
