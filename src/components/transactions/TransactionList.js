@@ -40,9 +40,9 @@ function TransactionList(props){
     return   <>
                 <div className='col-xs-12 col-sm-12 col-md-7 col-lg-7'>
                     <h4 className="mb-1 text-center">
-                        <span className="text-muted">Order History</span>
+                        <span className="text-white">Order History</span>
                     </h4>
-                    <p className="text-muted text-right">count : <b>{props.count}</b> </p>
+                    <p className="text-white text-right">count : <b>{props.count}</b> </p>
                     <div className='table-responsive'>
                         <table className='table table-dark text-center mx-auto'>
                             <thead>

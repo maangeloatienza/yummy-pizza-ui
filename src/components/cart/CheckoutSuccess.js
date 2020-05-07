@@ -48,35 +48,35 @@ class CheckoutSuccess extends Component{
                                         <div className='text-left'>
                                             <h6 className="my-0 font-weight-bolder">Reference number </h6>
                                         </div>
-                                        <span className="text-muted text-right">{this.state.transactions.code}</span>
+                                        <span className="font-weight-bolder text-right">{this.state.transactions.code}</span>
                                     </li>
 
                                     <li className="list-group-item d-flex justify-content-between lh-condensed">
                                         <div className='text-left'>
                                             <h6 className="my-0 font-weight-bolder">Billed to </h6>
                                         </div>
-                                        <span className="text-muted text-right">{this.state.transactions.first_name + ' ' + this.state.transactions.last_name}</span>
+                                        <span className="font-weight-bolder text-right">{this.state.transactions.first_name + ' ' + this.state.transactions.last_name}</span>
                                     </li>
 
                                     <li className="list-group-item d-flex justify-content-between lh-condensed">
                                         <div className='text-left'>
                                             <h6 className="my-0 font-weight-bolder">Contact details </h6>
                                         </div>
-                                        <span className="text-muted text-right">{this.state.transactions.contact_number}</span>
+                                        <span className="font-weight-bolder text-right">{this.state.transactions.contact_number}</span>
                                     </li>
 
                                     <li className="list-group-item d-flex justify-content-between lh-condensed">
                                         <div className='text-left'>
                                             <h6 className="my-0 font-weight-bolder">Delivery address </h6>
                                         </div>
-                                        <span className="text-muted text-right">{this.state.transactions.delivery_address}</span>
+                                        <span className="font-weight-bolder text-right">{this.state.transactions.delivery_address}</span>
                                     </li>
 
                                     <li className="list-group-item d-flex justify-content-between lh-condensed">
                                         <div className='text-left'>
                                             <h6 className="my-0 font-weight-bolder">TOTAL</h6>
                                         </div>
-                                        <span className="text-muted text-right">&#8369; {this.state.transactions.total}</span>
+                                        <span className="font-weight-bolder text-right">&#8369; {this.state.transactions.total}</span>
                                     </li>
                                 </ul>
                                 <button className='btn btn-md btn-success' onClick={this.goBack}>Continue shopping</button>

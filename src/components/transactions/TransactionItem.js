@@ -5,9 +5,9 @@ function TransactionItem(props){
 
     return  <div className='col-xs-12 col-sm-12 col-md-5 col-lg-5' id='previewTx'>
                 <h4 className='mb-1 text-center'>
-                    <span className="text-muted">Preview</span>
+                    <span className="text-white">Preview</span>
                 </h4>
-                <p className='text-muted text-right '>Code: <b>{code || 'Not Available'}</b> </p>
+                <p className='text-white text-right '>Code: <b>{code || 'Not Available'}</b> </p>
                 <div className='table-responsive'>
                     <table className='table table-dark text-white text-center mx-auto'>
                         <thead>

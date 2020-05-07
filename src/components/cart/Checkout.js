@@ -40,11 +40,10 @@ function Checkout(){
             }
         })
     }
+    
     const onClick = (event,value) => {
         event.preventDefault();
 
-        console.log('id', event.currentTarget.id)
-        console.log('value', event.currentTarget.value)
         onUpdate(event.currentTarget.id, parseInt(event.currentTarget.value) + value);
 
     }
