@@ -10,7 +10,7 @@ import {Toast, CusToast} from './../../utils/Toast';
 
 function ProductCard(props) {
   const {product } = props;
-  let [quantity, setQuantity] = useState(0);
+  let [quantity, setQuantity] = useState('');
   let [guest_user, setGuest] = useState(null);
   let [user, setUser] = useState(null);
 
