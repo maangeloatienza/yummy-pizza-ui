@@ -1,17 +1,16 @@
 import React, {useState, useEffect} from 'react';
-import {Toast} from './../../utils/Toast';
 
 import { getToken, getUser } from '../../utils/Commons';
 import { getUserCart, updateCart } from './../../api/apiCall';
 
 
-function Checkout(props){
+function Checkout(){
 
     const [cart, setCart] = useState([]);
     const [count, setCount] = useState(0);
     const [total, setTotal] = useState(0);
     const [charge, setCharge] = useState(0)
-    // const [quantity, setQuantity] = useState(0)
+
 
     useEffect(() => {
         getCartItems();
@@ -38,35 +37,17 @@ function Checkout(props){
 
             if(data.success){
                 getCartItems();
-
-                Toast(data);
             }
         })
     }
-
-
-    const onAdd = (event) => {
-        event.preventDefault();
-        
-        console.log('id', event.currentTarget.id)
-        console.log('value', event.currentTarget.value)
-        onUpdate(event.currentTarget.id, parseInt(event.currentTarget.value)+1);
- 
-    }
-
-    const onDeduct = (event) => {
+    const onClick = (event,value) => {
         event.preventDefault();
 
         console.log('id', event.currentTarget.id)
         console.log('value', event.currentTarget.value)
-        onUpdate(event.currentTarget.id, parseInt(event.currentTarget.value)-1);
-  
-
+        onUpdate(event.currentTarget.id, parseInt(event.currentTarget.value) + value);
 
     }
-
-
-
 
     return  <div>
                 <h4 className="d-flex justify-content-between align-items-center mb-3">
@@ -81,16 +62,16 @@ function Checkout(props){
                                         <li className="list-group-item d-flex justify-content-between lh-condensed" key={item.id}>
                                             <div>
                                                 <h6 className="my-0">{item.name}</h6>
-                                                {/* <small className="text-muted">x{item.quantity}</small> */}
+ 
                                                 <div className={'form-row'}>
                                                     <div className='col-2 px-0'>
                                                         <button
                                                             className='btn btn-xs btn-danger form-control mx-0'
-                                                            key={index}
+                                                            key={item.id}
                                                             id={item.id}
                                                             value={item.quantity}
                                                             onClick={(event) => {
-                                                                onDeduct(event);
+                                                                onClick(event,-1);
                                                             }}>
                                                             <i className="fa fa-minus"></i>
                                                         </button>
@@ -108,8 +89,8 @@ function Checkout(props){
                                                             key={item.id}
                                                             id={item.id}
                                                             value={item.quantity}
-                                                            onClick={(event,)=>{
-                                                                onAdd(event);
+                                                            onClick={(event)=>{
+                                                                onClick(event,1);
                                                             }}>
                                                                 <i className="fa fa-plus"></i>
                                                         </button>

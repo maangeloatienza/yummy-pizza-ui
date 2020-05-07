@@ -3,15 +3,17 @@ import TransactionItem from './TransactionItem';
 import { getTransaction } from './../../api/apiCall';
 
 function TransactionList(props){
-    const [transaction, setTransaction] = useState([]);
+    const [transaction, setTransaction] = useState(Array(10).fill([]));
     const [code, setCode] = useState(null);
     const [id, setId] = useState(null);
 
+    let {transactions} = props
+
     useEffect(() => {
-        fetchTransaction(id)
+        handleTransaction(id)
     }, []);
 
-    const fetchTransaction = (id,code) => {
+    const handleTransaction = (id,code) => {
 
         getTransaction(id).then(response => {
             let data = response.data
@@ -22,9 +24,7 @@ function TransactionList(props){
 
     const onClick = (event,id,code) =>{
         event.preventDefault();
-
-        fetchTransaction(id,code);
-
+        handleTransaction(id,code);
     }
 
     const dateConvert = (date) => {
@@ -33,12 +33,16 @@ function TransactionList(props){
         return dateTime.toDateString();
     }
 
+    const onPageClick = () =>{
+
+    }
+
     return   <>
                 <div className='col-xs-12 col-sm-12 col-md-7 col-lg-7'>
                     <h4 className="mb-1 text-center">
                         <span className="text-muted">Order History</span>
                     </h4>
-                    <p className="text-muted text-right">count : {props.count} </p>
+                    <p className="text-muted text-right">count : <b>{props.count}</b> </p>
                     <div className='table-responsive'>
                         <table className='table table-dark text-center mx-auto'>
                             <thead>
@@ -54,17 +58,12 @@ function TransactionList(props){
                             <tbody>
                                 {
 
-                                    props.transactions ? props.transactions.map((item, index) => {
+                                    transactions ? transactions.map((item, index) => {
                                         return <tr className="" key={item.id} >
-
                                             <td>
-                                                {/* <Link to={`transactions/${item.id}`}> */}
                                                 <small className="text-white">
-                                                    <a onClick={(event) => { onClick(event, item.id, item.code); }}>{item.code}</a>
+                                                    <a href='' onClick={(event) => { onClick(event, item.id, item.code); }}>{item.code}</a>
                                                 </small>
-
-                                                {/* <small>{item.code}</small>
-                                                            </Link> */}
                                             </td>
                                             <td>
                                                 <small className="text-white">{item.first_name + ' ' + item.last_name}</small>
@@ -73,13 +72,13 @@ function TransactionList(props){
                                                 <small className="text-white">{dateConvert(item.created)}</small>
                                             </td>
                                             <td>
-                                                <small className="text-white">&#8369; {item.total}</small>
+                                                <small className="text-white">&#8369;{(item.total.toFixed(2))}</small>
                                             </td>
                                             <td>
-                                                <small className="text-white">&#36; {item.total_usd}</small>
+                                                <small className="text-white">&#36;{(item.total_usd.toFixed(2))}</small>
                                             </td>
                                             <td>
-                                                <small className="text-white">&euro; {item.total_euro}</small>
+                                                <small className="text-white">&euro;{(item.total_euro.toFixed(2))}</small>
                                             </td>
 
                                         </tr>
