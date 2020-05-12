@@ -66,7 +66,7 @@ function Checkout(){
                                                     <div className='col-2 px-0'>
                                                         <button
                                                             className='btn btn-xs btn-danger form-control mx-0'
-                                                            key={item.id}
+                                                            // key={item.id}
                                                             id={item.id}
                                                             value={item.quantity}
                                                             onClick={(event) => {
@@ -85,7 +85,7 @@ function Checkout(){
                                                     <div className='col-2 px-0'>
                                                         <button
                                                             className='btn btn-xs btn-success form-control mx-0 width-50'
-                                                            key={item.id}
+                                                            // key={item.id}
                                                             id={item.id}
                                                             value={item.quantity}
                                                             onClick={(event)=>{

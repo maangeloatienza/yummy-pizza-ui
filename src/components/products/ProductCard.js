@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
 import { generate } from '../../utils/Generator';
 import { addCart, getUserCart } from './../../api/apiCall';
 import { getToken,getUser } from '../../utils/Commons';
@@ -58,9 +59,11 @@ function ProductCard(props) {
   }
 
   return <div className='col-xs-12 cold-sm-6 col-md-4 col-lg-3 my-2'>
-          <div className='card' key={product.id}>  
-            <div className='card-title font-weight-bolder fredoka-cursive m-auto'>{product.name}</div>
-            <img className='card-img-top img-fluid' style={{height:'180px'}} src={product.image} alt={product.name}/>
+          <div className='card' key={product.id}>
+            <Link to={`products/${product.id}`}>
+              <div className='card-title font-weight-bolder fredoka-cursive m-auto text-center'>{product.name}</div>
+              <img className='card-img-top img-fluid' style={{height:'180px'}} src={product.image} alt={product.name}/>
+            </Link>
             <div className='card-body'>
                 <div>
                   {/* <h5 className="card-title fredoka-cursive text-center">{product.name}</h5> */}
@@ -89,7 +92,11 @@ function ProductCard(props) {
             </div>
           </div>
         </div>
+
+
     
 }
 
 export default withGlobalState(ProductCard);
+
+

@@ -9,6 +9,7 @@ import Cart from './../cart/Cart';
 import CheckoutSuccess from './../cart/CheckoutSuccess';
 import Transactions from './../transactions/Transactions';
 import TransactionItem from './../transactions/TransactionItem';
+import ProductView from '../products/ProductView';
 
 
 class RouteLinks extends Component {
@@ -25,6 +26,7 @@ class RouteLinks extends Component {
           <Route path='/cart/checkout-success' component={CheckoutSuccess}/>
           <Route exact path='/transactions/' component={Transactions} />
           <Route path='/transactions/:id' component={TransactionItem} />
+          <Route path='/products/:id' component={ProductView}/>
 
         </Switch>
       </div>

@@ -18,6 +18,14 @@ export function getProducts(){
   });
 }
 
+export function getProduct(params) {
+  return API.get(`products/${params}`)
+    .then(response => {
+      let data = response.data.data;
+      return data;
+    });
+}
+
 export function getUserCart(params) {
   return API.get(`booking-items?${params}`)
     .then(response => {
