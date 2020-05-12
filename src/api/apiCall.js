@@ -18,6 +18,14 @@ export function getProducts(){
   });
 }
 
+export function getProduct(params) {
+  return API.get(`products/${params}`)
+    .then(response => {
+      let data = response.data.data;
+      return data;
+    });
+}
+
 export function getUserCart(params) {
   return API.get(`booking-items?${params}`)
     .then(response => {
@@ -65,6 +73,15 @@ export function getTransactions(params) {
 
 export function getTransaction(id,params) {
   return API.get(`transactions/${id}`)
+    .then(response => {
+      let data = response.data;
+
+      return data;
+    })
+}
+
+export function getBanners(params) {
+  return API.get(`banners?${params}`)
     .then(response => {
       let data = response.data;
 
