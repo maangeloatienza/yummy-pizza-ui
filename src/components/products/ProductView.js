@@ -73,9 +73,9 @@ const ProductView = (props) => {
                 <h3 className='font-weight-bolder '>{product.name}</h3>
 
                 <div className='row mt-3'>
-                    <span className='col-4 text-left text-muted'>&#8369;{product.price}</span>
-                    <span className='col-4 text-left text-muted'>&#36;{(product.price / 50.61).toFixed(2)}</span>
-                    <span className='col-4 text-left text-muted'>&euro;{(product.price / 55.66).toFixed(2)}</span>
+                    <span className='col-4 text-left'>&#8369;{product.price}</span>
+                    <span className='col-4 text-left'>&#36;{(product.price / 50.61).toFixed(2)}</span>
+                    <span className='col-4 text-left'>&euro;{(product.price / 55.66).toFixed(2)}</span>
                 </div>
                  
                 <div className='mt-5 mb-5'>
