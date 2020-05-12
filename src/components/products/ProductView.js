@@ -65,7 +65,7 @@ const ProductView = (props) => {
     }
 
     return (
-        <div className="row">
+        <div className="row text-white">
             <div className='col-xs-12 col-sm-12 col-md-6 col-lg-6'>
                 <img src={product.image} className='img-fluid mx-auto d-block col-8'/>
             </div>
