@@ -62,7 +62,7 @@ function ProductCard(props) {
           <div className='card' key={product.id}>
             <Link to={`products/${product.id}`}>
               <div className='card-title font-weight-bolder fredoka-cursive m-auto text-center'>{product.name}</div>
-              <img className='card-img-top img-fluid rounded' style={{height:'180px'}} src={product.image} alt={product.name}/>
+              <img className='card-img-top img-fluid' style={{height:'180px'}} src={product.image} alt={product.name}/>
             </Link>
             <div className='card-body'>
                 <div>
