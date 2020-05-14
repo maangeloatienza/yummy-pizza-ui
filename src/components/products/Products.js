@@ -24,9 +24,6 @@ class Products extends Component {
         this.props.setGlobalState({
           badge: cart.count
         })
-
-        
-
       });
       this.setState({ products: products })
     
