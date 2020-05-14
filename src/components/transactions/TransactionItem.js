@@ -34,7 +34,9 @@ function TransactionItem(props){
                                         <td>{item.quantity}</td>
                                     </tr>
                                 })
-                                    : <tr className='text-danger'>No Preview!</tr>
+                                    : <tr >
+                                        <td className='text-danger'>No Preview!</td>
+                                    </tr>
                             }
                         </tbody>
                     </table>
